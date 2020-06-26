@@ -1,0 +1,5 @@
+@import '../_mixins.scss';
+
+.loading-message {
+  @include centered-message();
+}

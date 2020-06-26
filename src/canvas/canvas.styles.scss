@@ -1,0 +1,31 @@
+@import '../_mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.initializer {
+  @include centered-message();
+  position: fixed;
+}
+
+.canvas {
+  height: 100%;
+  text-align: center;
+  background: black;
+}
+
+.generation-toggle-btn {
+  margin: auto;
+  position: fixed;
+  bottom: 10px;
+  background-color: white;
+  font-size: 2em;
+  border: none;
+  cursor: pointer;
+  opacity: 0.2;
+  transform: translate(-50%);
+  &:hover {
+    opacity: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+}
