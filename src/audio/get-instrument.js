@@ -10,11 +10,11 @@ const sampleFormat =
   audio.canPlayType('audio/ogg') !== '' ? OGG_FORMAT : MP3_FORMAT;
 
 const lowpass = new Filter({
-  frequency: 550,
+  frequency: 800,
   type: 'lowpass',
 });
 const lowshelf = new Filter({
-  freqequency: 1500,
+  freqequency: 7500,
   type: 'lowshelf',
   rolloff: -96,
 });

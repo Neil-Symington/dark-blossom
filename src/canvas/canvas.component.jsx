@@ -14,7 +14,7 @@ import colored from '../core/operators/colored.operator';
 import startAudioContext from '../audio/start-audio-context';
 import './canvas.styles.scss';
 
-const MIN_DELAY_MS = 7000;
+const MIN_DELAY_MS = 3000;
 const MAX_EXTRA_DELAY_MS = 5000;
 
 // HACK ALERT
@@ -142,14 +142,13 @@ const Canvas = ({ player }) => {
           size="lg"
         />
       </button>
-      <a
-      >
-        made by Neil Symington
-      </a>
+      <div className="shadow-sync">
+        Shadow Sync Project - dark blossom
+      </div>
     </div>
   ) : (
     <div className="initializer" ref={initializer}>
-      Press anywhere
+      Press anywhere - We recommend headphones for the best experience
     </div>
   );
   return (

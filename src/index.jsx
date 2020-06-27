@@ -9,7 +9,7 @@ import './base-styles.scss';
 if (process.env.NODE_ENV === 'production') {
   install();
 
-  console.log('https://github.com/generative-music/blossom');
+  console.log('https://github.com/Neil-Symington/dark-blossom');
 }
 
 render(<WithPlayer Component={Canvas} />, document.getElementById('root'));

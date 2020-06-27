@@ -4,6 +4,14 @@
 .initializer {
   @include centered-message();
   position: fixed;
+  opacity: 0.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: white;
 }
 
 .canvas {
@@ -27,5 +35,24 @@
   }
   &:focus {
     outline: none;
+  }
+}
+.shadow-sync {
+  opacity: 0.25;
+  @include centered-message();
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+  font-weight: 300;
+  user-select: none;
+  color: grey;
+
+}
+@media (max-width: 600px) {
+  .shadow-sync {
+    font-size: 0.75em;
   }
 }

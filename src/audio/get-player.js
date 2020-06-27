@@ -5,9 +5,9 @@ import getInstrument from './get-instrument';
 const ONE_HUNDRED = 100;
 const NOTE_TIME_OFFSET_S = 0.01;
 
-const tonicPc = 'D';
+const tonicPc = 'F';
 // eslint-disable-next-line no-magic-numbers
-const octaves = [2, 3, 4, 5, 6];
+const octaves = [2, 3, 4, 5];
 const notes = octaves.reduce(
   (allNotes, octave) =>
     allNotes.concat(Scale.notes(`${tonicPc}${octave}`, 'minor')),
