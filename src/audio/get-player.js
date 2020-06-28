@@ -1,9 +1,11 @@
-import { now } from 'tone';
+import { now, Filter } from 'tone';
 import { Scale } from 'tonal';
 import getInstrument from './get-instrument';
 
 const ONE_HUNDRED = 100;
 const NOTE_TIME_OFFSET_S = 0.01;
+const MAXCUTOFF = 15000;
+const MINCUTOFF = 10;
 
 const tonicPc = 'F';
 // eslint-disable-next-line no-magic-numbers
@@ -23,8 +25,8 @@ const getNoteAtHeight = yPct =>
   ];
 
 const getPlayer = () =>
-  getInstrument().then(instrument => () => ({ yPct, velocity }) => {
-    const note = getNoteAtHeight(yPct);
+  getInstrument().then(instrument => () => ({ yPct,velocity }) => {
+    const note = getNoteAtHeight(yPct)
     instrument.triggerAttack(note, now() + NOTE_TIME_OFFSET_S, velocity);
   });
 

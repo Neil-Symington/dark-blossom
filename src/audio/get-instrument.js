@@ -3,6 +3,7 @@ import samples from '../samples.json';
 
 const OGG_FORMAT = 'ogg';
 const MP3_FORMAT = 'mp3';
+const CUTOFF = 1500;
 
 const audio = document.createElement('audio');
 
@@ -10,7 +11,7 @@ const sampleFormat =
   audio.canPlayType('audio/ogg') !== '' ? OGG_FORMAT : MP3_FORMAT;
 
 const lowpass = new Filter({
-  frequency: 800,
+  frequency: CUTOFF,
   type: 'lowpass',
 });
 const lowshelf = new Filter({
